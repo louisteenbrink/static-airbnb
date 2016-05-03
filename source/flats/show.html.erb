@@ -1,0 +1,25 @@
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner_name] %>
+
+<div class="background-flat" style="background-image: url('<%= image_path flat.picture %>');">
+</div>
+
+<div class="container-flat">
+  <div class="flat-description">
+    <div class="left-info">
+    <%= image_tag flat.owner_picture, class: "img-circle avatar-team" %>
+    <p><%= flat.owner_name %></p>
+    </div>
+    <div class="right-info">
+    <h4><%= flat.summary %></h4>
+    <p><%= flat.city %></p>
+    <% flat.flat_rating.times do  %>
+      <span class="fa fa-star"></span>
+    <% end %>
+    </div>
+  </div>
+  <div class="book-flat">
+
+  </div>
+</div>
+
